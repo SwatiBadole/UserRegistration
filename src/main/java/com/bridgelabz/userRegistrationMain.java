@@ -43,6 +43,9 @@ public class userRegistrationMain {
                 case 7:
                     UserRegistration.validatePasswordRule3();
                     break;
+                case 8:
+                    UserRegistration.validatePasswordRule4();
+                    break;
                     default:
                     System.out.println("Enter valid input.");
             }
