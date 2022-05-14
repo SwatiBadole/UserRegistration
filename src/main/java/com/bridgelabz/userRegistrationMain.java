@@ -13,6 +13,9 @@ public class userRegistrationMain {
             System.out.println("1: Validate Frist name.");
             System.out.println("2:Validate last name");
             System.out.println("3: Validate E-Mail.");
+            System.out.println("4: Validate Mobile Number.");
+            System.out.println("5: Validate Password FristRule");
+            System.out.println("6: validate password secondRule");
             System.out.println("0: Exit.");
             choice = input.nextInt();
 
@@ -27,7 +30,16 @@ public class userRegistrationMain {
                     UserRegistration.validateEmail();
                     break;
 
-                default:
+                case 4:
+                    UserRegistration.validateMobileNumber();
+                    break;
+                case 5:
+                    UserRegistration.validatePasswordRule1();
+                    break;
+                case 6:
+                    UserRegistration.validatePasswordRule2();
+                    break;
+                    default:
                     System.out.println("Enter valid input.");
             }
         }while (choice != 0);

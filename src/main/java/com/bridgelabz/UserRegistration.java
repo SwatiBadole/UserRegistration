@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class UserRegistration {
     static Scanner sc = new Scanner(System.in);
 
-    public static void validateFirstName(){
+    public static void validateFirstName() {
 
         System.out.println("Enter first name: ");
         String fName = sc.next();
@@ -22,7 +22,8 @@ public class UserRegistration {
         else
             System.out.println("It is invalid first name.");
     }
-    public static void validateLastName(){
+
+    public static void validateLastName() {
 
         System.out.println("Enter last name: ");
         String lName = sc.next();
@@ -37,7 +38,8 @@ public class UserRegistration {
         else
             System.out.println("It is invalid last name.");
     }
-    public static void validateEmail(){
+
+    public static void validateEmail() {
         System.out.println("Enter your E-mail: ");
         String email = sc.next();
         String regex2 = "^[a-zA-Z0-9]+([.][A-Za-z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([.][A-Za-z]+)*$";
@@ -50,5 +52,50 @@ public class UserRegistration {
             System.out.println("It is a valid E-mail.");
         else
             System.out.println("It is invalid E-mail.");
+    }
+
+    public static void validateMobileNumber() {
+        System.out.println("Enter your mobile number: ");
+        String mobileNo = sc.next();
+        String regex3 = "(0|91)?[7-9][0-9]{9}";
+
+        Pattern pattern3 = Pattern.compile(regex3);
+        Matcher matcher3 = pattern3.matcher(mobileNo);
+        boolean r = matcher3.matches();
+
+        if (r)
+            System.out.println("It is a valid Mobile Number.");
+        else
+            System.out.println("It is invalid Mobile Number.");
+
+    }
+
+    public static void validatePasswordRule1() {
+        System.out.println("Enter The Password Atleast Eight Character: ");
+        String password = sc.nextLine();
+        String regex4 = "^[A-Z a-z 0-9]{8,}$";
+        Pattern pattern4 = Pattern.compile(regex4);
+        Matcher matcher4 = pattern4.matcher(password);
+        boolean r = matcher4.matches();
+
+        if (r)
+            System.out.println("It is a valid Password.");
+        else
+            System.out.println("It is invalid Password.");
+
+    }
+
+    public static void validatePasswordRule2() {
+        System.out.println("Enter The Password Atleast Eight Character one Upper case: ");
+        String password = sc.nextLine();
+        String regex5 = "^[A-Z]{1}+[a-z 0-9]{7,}$";
+        Pattern pattern5 = Pattern.compile(regex5);
+        Matcher matcher5 = pattern5.matcher(password);
+        boolean r = matcher5.matches();
+
+        if (r)
+            System.out.println("It is a valid Password.");
+        else
+            System.out.println("It is invalid Password.");
     }
 }
