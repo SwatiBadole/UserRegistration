@@ -19,8 +19,14 @@ public class UserRegistrationTest {
    @Test
     public void givenEmail_whenProper_ShouldReturnTrue() {
        UserRegistration userRegistration = new UserRegistration();
-       boolean result = userRegistration.validateEmail("Sw@ti.com");
+       boolean result = UserRegistration.validateEmail("swa@ti.com");
        Assertions.assertTrue(result);
    }
 
+   @Test
+    public void givenMobileFormat_whenProper_shouldreturnTrue(){
+        UserRegistration userRegistration=new UserRegistration();
+        boolean result=userRegistration.validateMobileNumber("8605690756");
+        Assertions.assertTrue(result);
+   }
 }
