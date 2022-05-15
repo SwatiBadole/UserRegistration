@@ -40,7 +40,7 @@ public class UserRegistration {
         return r;
     }
 
-    public static void validateEmail() {
+    public static boolean validateEmail() {
         System.out.println("Enter your E-mail: ");
         String email = sc.next();
         String regex2 = "^[a-zA-Z0-9]+([.][A-Za-z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([.][A-Za-z]+)*$";
@@ -53,6 +53,7 @@ public class UserRegistration {
             System.out.println("It is a valid E-mail.");
         else
             System.out.println("It is invalid E-mail.");
+        return r;
     }
 
     public static void validateMobileNumber() {
@@ -140,6 +141,14 @@ public class UserRegistration {
         String regex = "^^[A-Z]{1}[a-z]{2,}$";
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(lName);
+        boolean r = m.matches();
+        return r;
+    }
+
+    public boolean validateEmail(String email) {
+        String  regex="^[a-zA-Z0-9]+([.][A-Za-z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([.][A-Za-z]+)*$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(email);
         boolean r = m.matches();
         return r;
     }
