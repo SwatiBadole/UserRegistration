@@ -23,7 +23,7 @@ public class UserRegistration {
             System.out.println("It is invalid first name.");
     }
 
-    public static void validateLastName() {
+    public static boolean validateLastName() {
 
         System.out.println("Enter last name: ");
         String lName = sc.next();
@@ -37,6 +37,7 @@ public class UserRegistration {
             System.out.println("It is a valid last name.");
         else
             System.out.println("It is invalid last name.");
+        return r;
     }
 
     public static void validateEmail() {
@@ -128,10 +129,18 @@ public class UserRegistration {
     }
 
     public boolean validateFirstName(String fname) {
-        String regex="^[A-Z]{1}[a-z]*";
-        Pattern p=Pattern.compile(regex);
-        Matcher m=p.matcher(fname);
-        boolean r=m.matches();
+        String regex = "^[A-Z]{1}[a-z]*";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(fname);
+        boolean r = m.matches();
+        return r;
+    }
+
+    public boolean validateLastName(String lName) {
+        String regex = "^^[A-Z]{1}[a-z]{2,}$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(lName);
+        boolean r = m.matches();
         return r;
     }
 }

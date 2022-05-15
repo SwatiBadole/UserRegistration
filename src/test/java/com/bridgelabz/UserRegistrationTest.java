@@ -9,5 +9,11 @@ public class UserRegistrationTest {
         UserRegistration userRegistration=new UserRegistration();
         boolean result=userRegistration.validateFirstName("Swati");
         Assertions.assertTrue(result);
-    }git
+    }
+    @Test
+    public void givenLastName_whenProper_ShouldReturnTrue(){
+        UserRegistration userRegistration=new UserRegistration();
+        boolean result =userRegistration.validateLastName("Badole");
+        Assertions.assertTrue(result);
+   }
 }
