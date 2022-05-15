@@ -9,5 +9,5 @@ public class UserRegistrationTest {
         UserRegistration userRegistration=new UserRegistration();
         boolean result=userRegistration.validateFirstName("Swati");
         Assertions.assertTrue(result);
-    }
+    }git
 }
