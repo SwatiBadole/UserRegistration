@@ -11,7 +11,7 @@ public class userRegistrationMain {
 
             System.out.println("Enter your choice: ");
             System.out.println("1: Validate Frist name.");
-            System.out.println("2:Validate last name");
+            System.out.println("2: Validate last name");
             System.out.println("3: Validate E-Mail.");
             System.out.println("4: Validate Mobile Number.");
             System.out.println("5: Validate Password FristRule");

@@ -53,4 +53,11 @@ public class UserRegistrationTest {
         boolean result=userRegistration.validatePasswordRule3("Swatibad01");
         Assertions.assertTrue(result);
     }
+    //UC8
+    @Test
+    public void givenPasswordRule04_whenProper_shouldreturnTrue(){
+        UserRegistration userRegistration=new UserRegistration();
+        boolean result=userRegistration.validatePasswordRule4("Swatibad@1");
+        Assertions.assertTrue(result);
+    }
 }

@@ -182,4 +182,12 @@ public class UserRegistration {
         boolean r = m.matches();
         return r;
     }
+
+    public boolean validatePasswordRule4(String password) {
+        String regex = "^[a-zA-Z0-9]+([.][A-Za-z]+)*@[a-zA-Z]+[.]+[a-zA-Z]{2,3}+([.][A-Za-z]+)*$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(password);
+        boolean r = m.matches();
+        return r;
+    }
 }
