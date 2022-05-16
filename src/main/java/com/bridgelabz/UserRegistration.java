@@ -174,4 +174,12 @@ public class UserRegistration {
         boolean r = m.matches();
         return r;
     }
+
+    public boolean validatePasswordRule3(String password) {
+        String regex = "\"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$\"";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(password);
+        boolean r = m.matches();
+        return r;
+    }
 }
