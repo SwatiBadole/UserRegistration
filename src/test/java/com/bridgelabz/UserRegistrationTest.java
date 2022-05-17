@@ -50,14 +50,21 @@ public class UserRegistrationTest {
     @Test
     public void givenPasswordRule03_whenProper_shouldreturnTrue(){
         UserRegistration userRegistration=new UserRegistration();
-        boolean result=userRegistration.validatePasswordRule3("Swatibad01");
+        boolean result=userRegistration.validatePasswordRule3("Swatibad2002");
         Assertions.assertTrue(result);
     }
     //UC8
     @Test
     public void givenPasswordRule04_whenProper_shouldreturnTrue(){
         UserRegistration userRegistration=new UserRegistration();
-        boolean result=userRegistration.validatePasswordRule4("Swatibad@1");
+        boolean result=userRegistration.validatePasswordRule4("Swati@gmail.com");
+        Assertions.assertTrue(result);
+    }
+    //UC9
+    @Test
+    public void givenemailSamples_WhenProper_ShouldReturnTrue(){
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.emailSamples("Swatibadole2021998@gmail.com");
         Assertions.assertTrue(result);
     }
 }
